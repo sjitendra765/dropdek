@@ -1,0 +1,555 @@
+{
+  "content": [
+    {
+      "type": "slide",
+      "id": "tutorial-1",
+      "settings": {
+        "remix": "textimages-5050-fullbleed"
+      },
+      "children": [
+        {
+          "type": "heading-one",
+          "children": [
+            {
+              "text": "Getting started with Dropdeck"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "If you’ve ever used a word processor, you already know how to create stunning slides in Dropdeck."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Think it. Type it. See it.",
+              "bold": true
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "settings": {
+            "url": "/reference/tutorial/img/01.jpg"
+          }
+        }
+      ]
+    },
+    {
+      "type": "slide-break",
+      "children": [
+        {
+          "text": ""
+        }
+      ]
+    },
+    {
+      "type": "slide",
+      "id": "tutorial-2",
+      "settings": {
+        "remix": "textimages-5050-fullbleed"
+      },
+      "children": [
+        {
+          "type": "heading-one",
+          "children": [
+            {
+              "text": "Suggestions"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Dropdeck offers useful suggestions as you type."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "For example, type "
+            },
+            {
+              "text": "New",
+              "bold": true
+            },
+            {
+              "text": " and you’ll see the "
+            },
+            {
+              "text": "New Slide",
+              "italic": true
+            },
+            {
+              "text": " hint appear below your cursor."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Hit Enter to accept, or keep typing to dismiss it."
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "settings": {
+            "url": "/reference/tutorial/img/02.jpg"
+          }
+        }
+      ]
+    },
+    {
+      "type": "slide-break",
+      "children": [
+        {
+          "text": ""
+        }
+      ]
+    },
+
+    {
+      "type": "slide",
+      "id": "tutorial-3",
+      "settings": {
+        "remix": "textimages-5050-fullbleed"
+      },
+      "children": [
+        {
+          "type": "heading-one",
+          "children": [
+            {
+              "text": "Images"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Type "
+            },
+            {
+              "text": "Picture",
+              "bold": true
+            },
+            {
+              "text": " or "
+            },
+            {
+              "text": "Image",
+              "bold": true
+            },
+            {
+              "text": " to instantly search over a million rights cleared and free to use images. Use the "
+            },
+            {
+              "text": "cursor keys",
+              "bold": true
+            },
+            {
+              "text": " to choose, then hit "
+            },
+            {
+              "text": "Enter",
+              "bold": true
+            },
+            {
+              "text": " to add up to 4 images to your slide."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "You can also drag and drop images from your computer directly into the editor."
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "settings": {
+            "url": "/reference/tutorial/img/04.jpg"
+          }
+        }
+      ]
+    },
+    {
+      "type": "slide-break",
+      "children": [
+        {
+          "text": ""
+        }
+      ]
+    },
+    {
+      "type": "slide",
+      "id": "tutorial-4",
+      "settings": {
+        "remix": "text-default-leftaligned"
+      },
+      "children": [
+        {
+          "type": "heading-one",
+          "children": [
+            {
+              "text": "Adding Other Elements"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Use the keyboard to quickly add all kinds of different things to slides."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "For example, on a new line try typing "
+            },
+            {
+              "text": "Heading",
+              "bold": true
+            },
+            {
+              "text": " or "
+            },
+            {
+              "text": "Subheading",
+              "bold": true
+            },
+            {
+              "text": " to create a title."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Type "
+            },
+            {
+              "text": "Bullet",
+              "bold": true
+            },
+            {
+              "text": " or "
+            },
+            {
+              "text": "Number",
+              "bold": true
+            },
+            {
+              "text": " to create a new list. "
+            },
+            {
+              "text": "Quote, Table, Code",
+              "bold": true
+            },
+            {
+              "text": " or "
+            },
+            {
+              "text": "Math",
+              "bold": true
+            },
+            {
+              "text": " to add formatted text, or "
+            },
+            {
+              "text": "Logo",
+              "bold": true
+            },
+            {
+              "text": " to find and add a company logo."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Too much to remember? No worries. At any point you can browse all slide elements by typing a "
+            },
+            {
+              "text": "forward-slash ( / )",
+              "bold": true
+            },
+            {
+              "text": " at the start of any new line. As before, use the arrow keys and hit Enter to choose."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "slide-break",
+      "children": [
+        {
+          "text": ""
+        }
+      ]
+    },
+
+    {
+      "type": "slide",
+      "id": "tutorial-5",
+      "settings": {
+        "remix": "imageh1text-1005050-fullbleed"
+      },
+      "children": [
+        {
+          "type": "heading-one",
+          "children": [
+            {
+              "text": "Slide Design"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "To change the layout or colors of your slides, "
+            },
+            {
+              "text": "hover",
+              "bold": true
+            },
+            {
+              "text": " a slide preview and hit the "
+            },
+            {
+              "text": "Magic Wand button",
+              "bold": true
+            },
+            {
+              "text": " to open up the remix panel…"
+            }
+          ]
+        },
+
+        {
+          "type": "image",
+          "settings": {
+            "url": "/reference/tutorial/img/05.jpg"
+          }
+        }
+      ]
+    },
+    {
+      "type": "slide-break",
+      "children": [
+        {
+          "text": ""
+        }
+      ]
+    },
+    {
+      "type": "slide",
+      "id": "tutorial-6",
+      "settings": {
+        "remix": "imageh1text-1005050-fullbleed"
+      },
+      "children": [
+        {
+          "type": "heading-one",
+          "children": [
+            {
+              "text": "And Remix!"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "With the remix panel open, you can easily change up a slide’s design by choosing a layout from the available remixes…"
+            }
+          ]
+        },
+
+        {
+          "type": "image",
+          "settings": {
+            "url": "/reference/tutorial/img/06.jpg"
+          }
+        }
+      ]
+    },
+    {
+      "type": "slide-break",
+      "children": [
+        {
+          "text": ""
+        }
+      ]
+    },
+    {
+      "type": "slide",
+      "id": "tutorial-7",
+      "settings": {
+        "remix": "imageh1text-1005050-fullbleed"
+      },
+      "children": [
+        {
+          "type": "heading-one",
+          "children": [
+            {
+              "text": "Slide Colors"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "…or give slides a splash of color by choosing a color palette from those available. Feeling inspired? The "
+            },
+            {
+              "text": "customize colors",
+              "bold": true
+            },
+            {
+              "text": " button lets you design your own."
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "settings": {
+            "url": "/reference/tutorial/img/07.jpg"
+          }
+        }
+      ]
+    },
+    {
+      "type": "slide-break",
+      "children": [
+        {
+          "text": ""
+        }
+      ]
+    },
+    {
+      "type": "slide",
+      "id": "tutorial-8",
+      "settings": {
+        "remix": "textimages-5050-fullbleed"
+      },
+      "children": [
+        {
+          "type": "heading-one",
+          "children": [
+            {
+              "text": "Deck Themes"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "An eye‑catching theme will ensure your deck stands out from the crowd. Check out Dropdeck’s themes at any time from the Deck Sidebar."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "If you have a branded theme associated with your account, it will also be available here."
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "settings": {
+            "url": "/reference/tutorial/img/08.jpg"
+          }
+        }
+      ]
+    },
+    {
+      "type": "slide-break",
+      "children": [
+        {
+          "text": ""
+        }
+      ]
+    },
+
+
+    {
+      "type": "slide",
+      "id": "tutorial-9",
+      "settings": {
+        "remix": "textimages-5050-fullbleed"
+      },
+      "children": [
+        {
+          "type": "heading-one",
+          "children": [
+            {
+              "text": "We’d love your feedback."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "We hope you love Dropdeck. If a slide hasn’t come together in quite the way you expected, please let us know. To get in touch with us, click the "
+            },
+            {
+              "text": "?",
+              "bold": true
+            },
+            {
+              "text": " button at any time."
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "settings": {
+            "url": "/reference/tutorial/img/09.jpg"
+          }
+        }
+      ]
+    },
+    {
+      "type": "slide-break",
+      "children": [
+        {
+          "text": ""
+        }
+      ]
+    }
+
+  ],
+
+  "theme": "simple",
+  "name": "Getting started",
+  "coverId": "tutorial-1",
+  "_id": "tutorial",
+  "identifiers": {
+    "short": "tutorial"
+  }
+}

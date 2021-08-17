@@ -1,0 +1,83 @@
+name: Build and Deploy Docker images
+
+on:
+  push:
+    branches:
+      - master
+      - fixing-docker-deployment
+
+env:
+  PROJECT_ID: ${{ secrets.GKE_PROJECT }}
+  IMAGE_BACKEND: api
+  IMAGE_FRONTEND: app
+
+jobs:
+  setup-build-publish-deploy:
+    name: Build and Deploy Docker images
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Code checkout
+        uses: actions/checkout@v2
+
+      # Set up gcloud CLI
+      - name: Set up the Google Cloud CLI
+        uses: google-github-actions/setup-gcloud@master
+        with:
+          service_account_key: ${{ secrets.GKE_SA_KEY }}
+          project_id: ${{ secrets.GKE_PROJECT }}
+          export_default_credentials: true
+
+      # Configure Docker to use the gcloud command-line tool as a credential
+      # helper for authentication
+      - name: Authenticate against the GCR Docker registry
+        run: |-
+          gcloud --quiet auth configure-docker
+
+      # Build the Docker images
+      - name: Build - Backend
+        run: |-
+          docker build \
+            --tag "gcr.io/$PROJECT_ID/$IMAGE_BACKEND:$GITHUB_SHA" \
+            --tag "gcr.io/$PROJECT_ID/$IMAGE_BACKEND:latest" \
+            --build-arg GITHUB_SHA="$GITHUB_SHA" \
+            --build-arg GITHUB_REF="$GITHUB_REF" \
+            -f services/api/deployment/docker/prod/Dockerfile \
+            .
+
+      - name: Build - Static frontend
+        run: |-
+          docker build \
+            --target app-static \
+            --tag "gcr.io/$PROJECT_ID/$IMAGE_FRONTEND:$GITHUB_SHA" \
+            --tag "gcr.io/$PROJECT_ID/$IMAGE_FRONTEND:latest" \
+            --build-arg GITHUB_SHA="$GITHUB_SHA" \
+            --build-arg GITHUB_REF="$GITHUB_REF" \
+            -f services/app/deployment/docker/prod/composite/Dockerfile \
+            services/app/
+
+      - name: Build - Dynamic frontend
+        run: |-
+          docker build \
+            --target app-server \
+            --tag "gcr.io/$PROJECT_ID/app-server:$GITHUB_SHA" \
+            --tag "gcr.io/$PROJECT_ID/app-server:latest" \
+            --build-arg GITHUB_SHA="$GITHUB_SHA" \
+            --build-arg GITHUB_REF="$GITHUB_REF" \
+            -f services/app/deployment/docker/prod/composite/Dockerfile \
+            services/app/
+
+
+      # Push Docker images to Google Container Registry
+      - name: Publish - Backend
+        run: |-
+          docker push "gcr.io/$PROJECT_ID/$IMAGE_BACKEND:$GITHUB_SHA"
+
+      - name: Publish - Static frontend
+        run: |-
+          docker push "gcr.io/$PROJECT_ID/$IMAGE_FRONTEND:$GITHUB_SHA"
+
+      - name: Publish - Dynamic frontend
+        run: |-
+          docker push "gcr.io/$PROJECT_ID/app-server:$GITHUB_SHA"

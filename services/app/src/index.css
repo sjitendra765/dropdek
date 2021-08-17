@@ -1,0 +1,68 @@
+html {
+  height: 100%;
+  height: -webkit-fill-available;
+  -webkit-overflow-scrolling: touch;
+  overflow: auto;
+  scroll-behavior: smooth;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    /*background-color: #323234;*/
+    background-color: #1D1D1F;
+  }
+}
+
+@media only screen and (max-width: 740px) and (prefers-color-scheme: dark) {
+  html {
+    background-color: #000;
+  }
+}
+
+body {
+  margin: 0;
+  color: #323234;
+  text-shadow: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-variant-ligatures: none;
+  text-rendering: optimizeLegibility;
+  font-smoothing: grayscale;
+  font-size: 100%;
+  font-family: 'Inter var', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  letter-spacing: -0.018em;
+  font-weight: 400;
+  font-feature-settings: "ss01", /* open number digits */ "ss03", /* r curves into rounded neighbours */ "salt", /* alternates */ "cv10"; /* alt G with spur */
+  min-height: 100%; /* 100vh before mobile scrolling fix */
+  height: 100%;
+  min-height: -webkit-fill-available;
+  -webkit-overflow-scrolling: touch;
+  overflow: auto;
+}
+
+@supports (font-variation-settings: normal) {
+  body {
+    font-family: 'Inter var', "Helvetica Neue", Helvetica, Arial, sans-serif
+  }
+}
+
+code, pre {
+  -webkit-font-feature-settings: "liga" on, "calt" on;
+  font-variant-ligatures: discretionary-ligatures;
+  -webkit-font-variant-ligatures: discretionary-ligatures;
+  text-rendering: optimizeLegibility;
+  font-family: "Overpass Mono";
+  display: block;
+}
+
+[tabindex="0"], *:focus {
+  outline: none;
+}
+
+/* Overwrite padding on text toolbar / theme picker flyouts in production */
+#split-button-menu.MuiList-padding,
+#simple-menu .MuiPopover-paper .MuiList-padding {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}

@@ -1,0 +1,30 @@
+name: Move issues to the main Kanban board
+
+on:
+  issues:
+    types: [opened]
+#  pull_request:
+#    types: [opened]
+env:
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+jobs:
+  assign_project:
+    runs-on: ubuntu-latest
+    name: Assign to a project
+    steps:
+#      - name: Debug github payload
+#        run: echo 'GitHub payload' ${github}
+      - name: Move new issues to the Development project
+        uses: srggrs/assign-one-project-github-action@1.2.0
+        if: github.event_name == 'issues'
+        with:
+          project: 'https://github.com/dropdeck-com/dropdeck/projects/6'
+          column_name: 'New issues'
+
+#      - name: Assign new pull requests to the Development project
+#        uses: srggrs/assign-one-project-github-action@1.2.0
+#        if: github.event_name == 'pull_request'
+#        with:
+#          project: 'https://github.com/dropdeck-com/dropdeck/projects/6'
+#          # column_name: 'In progress'

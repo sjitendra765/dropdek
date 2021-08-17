@@ -1,0 +1,41 @@
+# This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
+# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
+
+name: Dropdeck CI
+
+on:
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+    name: Build and test
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out
+        uses: actions/checkout@v1
+      - name: Set up Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: '12.8.x'
+      - name: Install
+        uses: borales/actions-yarn@v2.0.0
+        with:
+          cmd: install # will run `yarn install` command
+      - name: Validate syntax
+        uses: borales/actions-yarn@v2.0.0
+        with:
+          cmd: lint # will run `yarn lint` command
+      - name: Run API tests
+        working-directory: ./services/api
+        run: |
+          yarn test --watchAll=false
+      - name: Run app tests
+        working-directory: ./services/app
+        run: |
+          yarn install
+          yarn test --watchAll=false
+
+env:
+  CI: true
